@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_navigation_items",
+  "info": {
+    "displayName": "items",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "modalSlug": {
+      "type": "string"
+    },
+    "contentItems": {
+      "displayName": "contentItems",
+      "type": "component",
+      "repeatable": false,
+      "component": "content.content-items"
+    }
+  }
+}

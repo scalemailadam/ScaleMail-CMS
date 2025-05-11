@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sections_heading_sections",
+  "info": {
+    "displayName": "HeadingSection",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "textSize": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    },
+    "color": {
+      "type": "string"
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

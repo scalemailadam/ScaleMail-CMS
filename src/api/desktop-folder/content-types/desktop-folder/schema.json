@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "desktop_folders",
+  "info": {
+    "singularName": "desktop-folder",
+    "pluralName": "desktop-folders",
+    "displayName": "DesktopFolder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "items",
+      "type": "component",
+      "repeatable": true,
+      "component": "folder-item.items"
+    },
+    "folder_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::folder-category.folder-category",
+      "inversedBy": "desktop_folders"
+    },
+    "onDesktop": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "modalSlug": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "uid"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

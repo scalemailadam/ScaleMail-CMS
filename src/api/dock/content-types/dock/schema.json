@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "docks",
+  "info": {
+    "singularName": "dock",
+    "pluralName": "docks",
+    "displayName": "Dock",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "dockItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.dock-item"
+    }
+  }
+}

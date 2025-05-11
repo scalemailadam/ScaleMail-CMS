@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "folder_categories",
+  "info": {
+    "singularName": "folder-category",
+    "pluralName": "folder-categories",
+    "displayName": "FolderCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "desktop_folders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::desktop-folder.desktop-folder",
+      "mappedBy": "folder_categories"
+    }
+  }
+}

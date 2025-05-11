@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_gallery_sections",
+  "info": {
+    "displayName": "GallerySection",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "columns": {
+      "type": "integer"
+    },
+    "gap": {
+      "type": "integer"
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "integer"
+    }
+  }
+}

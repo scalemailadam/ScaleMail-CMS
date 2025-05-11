@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_folder_item_items",
+  "info": {
+    "displayName": "items",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reactIcon": {
+      "type": "string"
+    },
+    "reactIconColor": {
+      "type": "string"
+    },
+    "modalSlug": {
+      "type": "string"
+    },
+    "subItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.items"
+    }
+  }
+}

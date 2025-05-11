@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_navigation_dock_items",
+  "info": {
+    "displayName": "DockItem",
+    "icon": "oneToOne",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "reactIconName": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "modalSlug": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "reactIconColor": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

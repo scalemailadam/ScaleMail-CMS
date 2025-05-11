@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_navigation_social_links",
+  "info": {
+    "displayName": "socialLinks",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "iconName": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

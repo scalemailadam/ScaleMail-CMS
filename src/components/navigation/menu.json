@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_navigation_menus",
+  "info": {
+    "displayName": "Menu",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "displayName": "items",
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.items"
+    }
+  }
+}

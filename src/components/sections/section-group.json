@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_section_groups",
+  "info": {
+    "displayName": "SectionGroup",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

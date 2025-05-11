@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_rich_text_sections",
+  "info": {
+    "displayName": "RichTextSection",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "paragraphText": {
+      "type": "blocks"
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

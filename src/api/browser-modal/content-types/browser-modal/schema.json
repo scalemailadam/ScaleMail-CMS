@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "browser_modals",
+  "info": {
+    "singularName": "browser-modal",
+    "pluralName": "browser-modals",
+    "displayName": "BrowserModal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.section-group",
+        "sections.rich-text-section",
+        "sections.image-section",
+        "sections.heading-section",
+        "sections.gallery-section"
+      ]
+    }
+  }
+}

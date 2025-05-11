@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_navigation_menu_items",
+  "info": {
+    "displayName": "MenuItem",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
