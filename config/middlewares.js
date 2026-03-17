@@ -1,38 +1,31 @@
-module.exports = [
-  'strapi::logger',
-  'strapi::errors',
-  {
-    name: 'strapi::security',
+module.exports = ({ env }) => ({
+  graphql: {
+    enabled: true,
     config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'https:'],
-          'media-src': ["'self'", 'data:', 'blob:', 'https:'],
-          upgradeInsecureRequests: null,
-        },
+      endpoint: '/graphql',
+      shadowCRUD: true,
+      playgroundAlways: false,
+      depthLimit: 10,
+      amountLimit: 100,
+      apolloServer: {
+        tracing: false,
+        introspection: true,
       },
     },
   },
-  {
-    name: 'strapi::cors',
+  upload: {
     config: {
-      enabled: true,
-      headers: '*',
-      origin: [
-        'http://localhost:3000',
-        'https://scalemail.vercel.app',
-        'https://scalemailstudio.com',
-        'https://www.scalemailstudio.com',
-        'https://scalemail-cms.onrender.com',
-      ],
+      provider: '@strapi/provider-upload-cloudinary',
+      providerOptions: {
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
+      },
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
+      },
     },
   },
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-];
+});
