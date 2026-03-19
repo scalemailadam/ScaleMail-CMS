@@ -1,9 +1,9 @@
 {
   "collectionName": "components_sections_heading_sections",
   "info": {
-    "displayName": "HeadingSection",
+    "displayName": "Heading",
     "icon": "bulletList",
-    "description": ""
+    "description": "A title or heading line. Choose size (h1\u2013h6), color, and alignment."
   },
   "options": {},
   "attributes": {

@@ -1,9 +1,9 @@
 {
   "collectionName": "components_sections_rich_text_sections",
   "info": {
-    "displayName": "RichTextSection",
+    "displayName": "Text Paragraph",
     "icon": "code",
-    "description": ""
+    "description": "A block of rich text. Supports bold, italic, lists, and links."
   },
   "options": {},
   "attributes": {

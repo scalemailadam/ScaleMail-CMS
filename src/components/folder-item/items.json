@@ -1,9 +1,9 @@
 {
   "collectionName": "components_folder_item_items",
   "info": {
-    "displayName": "items",
+    "displayName": "Folder Item",
     "icon": "calendar",
-    "description": ""
+    "description": "One item inside a desktop folder. Set 'url' to link out to a website, 'modalSlug' to open a window, or leave both empty and add Sub-Items to create a nested folder."
   },
   "options": {},
   "attributes": {
@@ -34,6 +34,7 @@
       "type": "string"
     },
     "subItem": {
+      "displayName": "Sub-Items",
       "type": "component",
       "repeatable": true,
       "component": "navigation.items"

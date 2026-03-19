@@ -1,7 +1,7 @@
 {
   "collectionName": "components_navigation_menu_items",
   "info": {
-    "displayName": "MenuItem",
+    "displayName": "Menu Item (Legacy)",
     "icon": "apps"
   },
   "options": {},
@@ -12,7 +12,7 @@
     },
     "url": {
       "type": "string",
-      "required": true
+      "required": false
     }
   }
 }

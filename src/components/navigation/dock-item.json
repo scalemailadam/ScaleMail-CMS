@@ -1,9 +1,9 @@
 {
   "collectionName": "components_navigation_dock_items",
   "info": {
-    "displayName": "DockItem",
+    "displayName": "Dock Icon",
     "icon": "oneToOne",
-    "description": ""
+    "description": "One icon in the bottom dock. Set 'url' to open a website, or 'modalSlug' to open a window (e.g. openFolder, browserModal, resumeModal, garmentDesignModal)."
   },
   "options": {},
   "attributes": {

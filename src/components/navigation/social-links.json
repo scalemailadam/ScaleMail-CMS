@@ -1,9 +1,9 @@
 {
   "collectionName": "components_navigation_social_links",
   "info": {
-    "displayName": "socialLinks",
+    "displayName": "Social Link",
     "icon": "link",
-    "description": ""
+    "description": "One social media icon in the top-right of the header. 'iconName' must be a valid react-icons name e.g. Github, X, Linkedin, Instagram."
   },
   "options": {},
   "attributes": {

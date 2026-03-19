@@ -4,8 +4,8 @@
   "info": {
     "singularName": "desktop-folder",
     "pluralName": "desktop-folders",
-    "displayName": "DesktopFolder",
-    "description": ""
+    "displayName": "Desktop Icon",
+    "description": "Each entry is one icon on the desktop. Set 'Action' to control what happens when it's opened: openFolder = Finder window, browserModal = browser popup, resumeModal = resume viewer, garmentDesignModal = garment gallery. Leave 'Action' empty and fill in 'Url' to make it a plain link."
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
       "type": "string"
     },
     "items": {
-      "displayName": "items",
+      "displayName": "Folder Contents",
       "type": "component",
       "repeatable": true,
       "component": "folder-item.items"
