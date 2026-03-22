@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Store \u2014 Product",
+    "description": "Products listed in the store. Each entry appears on /store. Upload images via Cloudinary, set sizes as a JSON array (e.g. [\"S\",\"M\",\"L\"]), and add color variants with their own photo sets."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "season": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "sizes": {
+      "type": "json"
+    },
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.color-variant"
+    }
+  }
+}
