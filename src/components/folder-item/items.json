@@ -33,6 +33,9 @@
     "modalSlug": {
       "type": "string"
     },
+    "richContent": {
+      "type": "richtext"
+    },
     "subItem": {
       "displayName": "Sub-Items",
       "type": "component",
