@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "reactIconName": {
+    "reactIcon": {
       "type": "string",
       "required": false
     },

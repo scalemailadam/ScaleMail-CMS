@@ -3,11 +3,11 @@
   "info": {
     "displayName": "Folder Item",
     "icon": "calendar",
-    "description": "One item inside a desktop folder. Set 'url' to link out to a website, 'modalSlug' to open a window, or leave both empty and add Sub-Items to create a nested folder."
+    "description": "One item inside a desktop folder. Set 'url' to link out to a website, or set 'modalSlug' to open a window. Valid modalSlug values: openFolder (Finder), browserModal (browser popup), resumeModal (PDF/resume viewer), garmentDesignModal (image gallery), textModal (rich text document), imageFolderModal (image sub-folder), pictureModal (single image). Leave both empty and add Sub-Items to create a nested folder."
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
     "url": {

@@ -26,16 +26,8 @@
       "target": "api::folder-category.folder-category",
       "inversedBy": "desktop_folders"
     },
-    "onDesktop": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
     "modalSlug": {
       "type": "string"
-    },
-    "uuid": {
-      "type": "uid"
     },
     "icon": {
       "type": "media",
