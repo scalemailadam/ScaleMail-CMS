@@ -45,6 +45,14 @@
     },
     "richContent": {
       "type": "richtext"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "description": "Background color for textModal. Any CSS color value, e.g. #ffffff or #1a1a2e"
+    },
+    "textColor": {
+      "type": "string",
+      "description": "Text color for textModal. Any CSS color value, e.g. #111111 or #f0f0f0"
     }
   }
 }
