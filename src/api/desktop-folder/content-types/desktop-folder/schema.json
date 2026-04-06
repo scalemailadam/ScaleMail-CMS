@@ -42,6 +42,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "richContent": {
+      "type": "richtext"
     }
   }
 }
