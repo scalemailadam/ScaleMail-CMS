@@ -22,6 +22,14 @@
       "relation": "manyToMany",
       "target": "api::desktop-folder.desktop-folder",
       "mappedBy": "folder_categories"
+    },
+    "reactIcon": {
+      "type": "string",
+      "description": "React Icons name for this category's icon (e.g. FaFolder, FaUser, FaBriefcase). Browse icons at react-icons.github.io"
+    },
+    "reactIconColor": {
+      "type": "string",
+      "description": "CSS color for the icon, e.g. #7DD3FC or white"
     }
   }
 }
