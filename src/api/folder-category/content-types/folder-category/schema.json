@@ -23,6 +23,13 @@
       "target": "api::desktop-folder.desktop-folder",
       "mappedBy": "folder_categories"
     },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "description": "Custom image icon for this category. Takes priority over React Icon if both are set."
+    },
     "reactIcon": {
       "type": "string",
       "description": "React Icons name for this category's icon (e.g. FaFolder, FaUser, FaBriefcase). Browse icons at react-icons.github.io"
