@@ -1,9 +1,9 @@
 {
   "collectionName": "components_sections_gallery_sections",
   "info": {
-    "displayName": "GallerySection",
+    "displayName": "Gallery — Image Grid",
     "icon": "apps",
-    "description": ""
+    "description": "A grid of images. Set columns/rows to control the layout."
   },
   "options": {},
   "attributes": {

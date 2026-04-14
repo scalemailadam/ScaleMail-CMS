@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "system_settings",
+  "info": {
+    "singularName": "system-settings",
+    "pluralName": "system-settings-list",
+    "displayName": "System Settings",
+    "description": "macOS-style System Settings modal configuration. Edit sidebar items, profile info, and appearance background options."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "profileName": {
+      "type": "string",
+      "default": "Clayton Wingfield"
+    },
+    "profileSubtitle": {
+      "type": "string",
+      "default": "AAADM Account"
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "sidebarItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "settings.sidebar-item"
+    },
+    "backgroundOptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "settings.background-option"
+    },
+    "about": {
+      "type": "richtext"
+    }
+  }
+}

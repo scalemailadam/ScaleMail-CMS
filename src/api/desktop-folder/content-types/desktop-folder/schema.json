@@ -4,8 +4,8 @@
   "info": {
     "singularName": "desktop-folder",
     "pluralName": "desktop-folders",
-    "displayName": "DesktopFolder",
-    "description": ""
+    "displayName": "Desktop Icon",
+    "description": "Each entry is one icon on the desktop. Set 'Action' to control what happens when it's opened: openFolder = Finder window, browserModal = browser popup, resumeModal = resume viewer, garmentDesignModal = garment gallery. Leave 'Action' empty and fill in 'Url' to make it a plain link."
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
       "type": "string"
     },
     "items": {
-      "displayName": "items",
+      "displayName": "Folder Contents",
       "type": "component",
       "repeatable": true,
       "component": "folder-item.items"
@@ -26,16 +26,8 @@
       "target": "api::folder-category.folder-category",
       "inversedBy": "desktop_folders"
     },
-    "onDesktop": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
     "modalSlug": {
       "type": "string"
-    },
-    "uuid": {
-      "type": "uid"
     },
     "icon": {
       "type": "media",
@@ -47,6 +39,20 @@
         "videos",
         "audios"
       ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "richContent": {
+      "type": "richtext"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "description": "Background color for textModal. Any CSS color value, e.g. #ffffff or #1a1a2e"
+    },
+    "textColor": {
+      "type": "string",
+      "description": "Text color for textModal. Any CSS color value, e.g. #111111 or #f0f0f0"
     }
   }
 }

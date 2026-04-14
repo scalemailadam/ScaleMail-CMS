@@ -4,8 +4,8 @@
   "info": {
     "singularName": "folder-category",
     "pluralName": "folder-categories",
-    "displayName": "FolderCategory",
-    "description": ""
+    "displayName": "Finder Sidebar Category",
+    "description": "Groups shown in the left sidebar of the Finder window. The 'Desktop' category controls which icons appear on the main desktop screen."
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +22,21 @@
       "relation": "manyToMany",
       "target": "api::desktop-folder.desktop-folder",
       "mappedBy": "folder_categories"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "description": "Custom image icon for this category. Takes priority over React Icon if both are set."
+    },
+    "reactIcon": {
+      "type": "string",
+      "description": "React Icons name for this category's icon (e.g. FaFolder, FaUser, FaBriefcase). Browse icons at react-icons.github.io"
+    },
+    "reactIconColor": {
+      "type": "string",
+      "description": "CSS color for the icon, e.g. #7DD3FC or white"
     }
   }
 }

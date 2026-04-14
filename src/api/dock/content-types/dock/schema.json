@@ -5,13 +5,14 @@
     "singularName": "dock",
     "pluralName": "docks",
     "displayName": "Dock",
-    "description": ""
+    "description": "The row of icons at the bottom of the screen. Add icons here, then set either 'Url' (opens a website) or 'Action' (opens a window) on each one."
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "dockItem": {
+      "displayName": "Dock Icons",
       "type": "component",
       "repeatable": true,
       "component": "navigation.dock-item"

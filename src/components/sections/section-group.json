@@ -1,9 +1,9 @@
 {
   "collectionName": "components_sections_section_groups",
   "info": {
-    "displayName": "SectionGroup",
+    "displayName": "Background Color Block",
     "icon": "apps",
-    "description": ""
+    "description": "Sets a background color for the sections that follow it. Enter a hex color like #1a1a2e."
   },
   "options": {},
   "attributes": {

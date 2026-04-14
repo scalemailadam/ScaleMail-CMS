@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_settings_sidebar_items",
+  "info": {
+    "displayName": "Sidebar Item",
+    "icon": "list",
+    "description": "A sidebar navigation item for the System Settings modal"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "reactIcon": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

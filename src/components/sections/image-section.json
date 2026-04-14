@@ -1,9 +1,9 @@
 {
   "collectionName": "components_sections_image_sections",
   "info": {
-    "displayName": "ImageSection",
+    "displayName": "Single Image",
     "icon": "crop",
-    "description": ""
+    "description": "One image with optional width, height, and alignment."
   },
   "options": {},
   "attributes": {

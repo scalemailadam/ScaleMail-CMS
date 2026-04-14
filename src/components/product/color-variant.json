@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_color_variants",
+  "info": {
+    "displayName": "Color Variant",
+    "icon": "paint-brush",
+    "description": "One color option for a product. 'Image' is the single swatch thumbnail shown on the product card. 'Images' is the full gallery shown when this color is selected on the product page."
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "hex": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

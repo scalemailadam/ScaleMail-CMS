@@ -1,13 +1,13 @@
 {
   "collectionName": "components_folder_item_items",
   "info": {
-    "displayName": "items",
+    "displayName": "Folder Item",
     "icon": "calendar",
-    "description": ""
+    "description": "One item inside a desktop folder. Set 'url' to link out to a website, or set 'modalSlug' to open a window. Valid modalSlug values: openFolder (Finder), browserModal (browser popup), resumeModal (PDF/resume viewer), garmentDesignModal (image gallery), textModal (rich text document), imageFolderModal (image sub-folder), pictureModal (single image). Leave both empty and add Sub-Items to create a nested folder."
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
     "url": {
@@ -33,7 +33,19 @@
     "modalSlug": {
       "type": "string"
     },
+    "richContent": {
+      "type": "richtext"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "description": "Background color for textModal. Any CSS color value, e.g. #ffffff or #1a1a2e"
+    },
+    "textColor": {
+      "type": "string",
+      "description": "Text color for textModal. Any CSS color value, e.g. #111111 or #f0f0f0"
+    },
     "subItem": {
+      "displayName": "Sub-Items",
       "type": "component",
       "repeatable": true,
       "component": "navigation.items"

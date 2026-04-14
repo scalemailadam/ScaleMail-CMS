@@ -1,13 +1,17 @@
 {
   "collectionName": "components_navigation_items",
   "info": {
-    "displayName": "items",
+    "displayName": "Dropdown Menu Item",
     "icon": "dashboard",
-    "description": ""
+    "description": "One item in a top-bar dropdown menu or a sub-item inside a folder. Fill in 'url' to link to a website, or 'modalSlug' to open a window."
   },
   "options": {},
   "attributes": {
     "text": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
       "type": "string",
       "required": false
     },
@@ -26,7 +30,7 @@
       "type": "string"
     },
     "contentItems": {
-      "displayName": "contentItems",
+      "displayName": "Image Files",
       "type": "component",
       "repeatable": false,
       "component": "content.content-items"

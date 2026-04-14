@@ -1,8 +1,9 @@
 {
   "collectionName": "components_content_content_items",
   "info": {
-    "displayName": "contentItems",
-    "icon": "attachment"
+    "displayName": "Image Files",
+    "icon": "attachment",
+    "description": "The image files attached to a sub-item (e.g. the full design images for a garment)."
   },
   "options": {},
   "attributes": {

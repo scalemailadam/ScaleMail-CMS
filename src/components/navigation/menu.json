@@ -1,9 +1,9 @@
 {
   "collectionName": "components_navigation_menus",
   "info": {
-    "displayName": "Menu",
+    "displayName": "Top Bar Menu",
     "icon": "stack",
-    "description": ""
+    "description": "One dropdown menu in the top bar (e.g. 'File', 'About'). Add items below for each option in the dropdown."
   },
   "options": {},
   "attributes": {
@@ -12,7 +12,7 @@
       "required": true
     },
     "items": {
-      "displayName": "items",
+      "displayName": "Dropdown Items",
       "type": "component",
       "repeatable": true,
       "component": "navigation.items"

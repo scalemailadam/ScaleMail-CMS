@@ -5,7 +5,7 @@
     "singularName": "header",
     "pluralName": "headers",
     "displayName": "Header",
-    "description": ""
+    "description": "The top menu bar. Contains your logo, dropdown menus, and social media icons."
   },
   "options": {
     "draftAndPublish": true
@@ -22,8 +22,16 @@
         "files"
       ]
     },
+    "darkLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "pluginOptions": {},
+      "description": "White/light logo used on dark backgrounds. If empty, falls back to the main logo."
+    },
     "menus": {
-      "displayName": "Menu",
+      "displayName": "Top Bar Menus",
       "type": "component",
       "repeatable": true,
       "component": "navigation.menu"

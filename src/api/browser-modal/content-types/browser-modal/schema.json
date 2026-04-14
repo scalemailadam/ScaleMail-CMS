@@ -4,8 +4,8 @@
   "info": {
     "singularName": "browser-modal",
     "pluralName": "browser-modals",
-    "displayName": "BrowserModal",
-    "description": ""
+    "displayName": "Browser Window",
+    "description": "The popup window that opens when a dock/desktop icon uses the 'browserModal' action. Use the content blocks below to build the page."
   },
   "options": {
     "draftAndPublish": true
