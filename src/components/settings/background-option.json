@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_settings_background_options",
+  "info": {
+    "displayName": "Background Option",
+    "icon": "palette",
+    "description": "A background theme option for the Appearance settings"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "themeKey": {
+      "type": "string",
+      "required": true
+    },
+    "tipColor": {
+      "type": "string",
+      "default": "#355566"
+    },
+    "baseColor": {
+      "type": "string",
+      "default": "#102630"
+    },
+    "strokeColor": {
+      "type": "string",
+      "default": "#2a0e0e"
+    },
+    "previewColor": {
+      "type": "string",
+      "default": "#1e3a4a"
+    }
+  }
+}

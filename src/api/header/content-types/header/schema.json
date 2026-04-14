@@ -22,6 +22,14 @@
         "files"
       ]
     },
+    "darkLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "pluginOptions": {},
+      "description": "White/light logo used on dark backgrounds. If empty, falls back to the main logo."
+    },
     "menus": {
       "displayName": "Top Bar Menus",
       "type": "component",

@@ -372,8 +372,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiBrowserModalBrowserModal extends Struct.SingleTypeSchema {
   collectionName: 'browser_modals';
   info: {
-    description: '';
-    displayName: 'BrowserModal';
+    description: "The popup window that opens when a dock/desktop icon uses the 'browserModal' action. Use the content blocks below to build the page.";
+    displayName: 'Browser Window';
     pluralName: 'browser-modals';
     singularName: 'browser-modal';
   };
@@ -414,8 +414,8 @@ export interface ApiDesktopFolderDesktopFolder
   extends Struct.CollectionTypeSchema {
   collectionName: 'desktop_folders';
   info: {
-    description: '';
-    displayName: 'DesktopFolder';
+    description: "Each entry is one icon on the desktop. Set 'Action' to control what happens when it's opened: openFolder = Finder window, browserModal = browser popup, resumeModal = resume viewer, garmentDesignModal = garment gallery. Leave 'Action' empty and fill in 'Url' to make it a plain link.";
+    displayName: 'Desktop Icon';
     pluralName: 'desktop-folders';
     singularName: 'desktop-folder';
   };
@@ -423,6 +423,7 @@ export interface ApiDesktopFolderDesktopFolder
     draftAndPublish: true;
   };
   attributes: {
+    backgroundColor: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -442,22 +443,21 @@ export interface ApiDesktopFolderDesktopFolder
     > &
       Schema.Attribute.Private;
     modalSlug: Schema.Attribute.String;
-    onDesktop: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
     publishedAt: Schema.Attribute.DateTime;
+    richContent: Schema.Attribute.RichText;
+    textColor: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    uuid: Schema.Attribute.UID;
+    url: Schema.Attribute.String;
   };
 }
 
 export interface ApiDockDock extends Struct.SingleTypeSchema {
   collectionName: 'docks';
   info: {
-    description: '';
+    description: "The row of icons at the bottom of the screen. Add icons here, then set either 'Url' (opens a website) or 'Action' (opens a window) on each one.";
     displayName: 'Dock';
     pluralName: 'docks';
     singularName: 'dock';
@@ -484,8 +484,8 @@ export interface ApiFolderCategoryFolderCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'folder_categories';
   info: {
-    description: '';
-    displayName: 'FolderCategory';
+    description: "Groups shown in the left sidebar of the Finder window. The 'Desktop' category controls which icons appear on the main desktop screen.";
+    displayName: 'Finder Sidebar Category';
     pluralName: 'folder-categories';
     singularName: 'folder-category';
   };
@@ -500,6 +500,7 @@ export interface ApiFolderCategoryFolderCategory
       'manyToMany',
       'api::desktop-folder.desktop-folder'
     >;
+    icon: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -509,6 +510,8 @@ export interface ApiFolderCategoryFolderCategory
     name: Schema.Attribute.String;
     order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
+    reactIcon: Schema.Attribute.String;
+    reactIconColor: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -518,7 +521,7 @@ export interface ApiFolderCategoryFolderCategory
 export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
   collectionName: 'headers';
   info: {
-    description: '';
+    description: 'The top menu bar. Contains your logo, dropdown menus, and social media icons.';
     displayName: 'Header';
     pluralName: 'headers';
     singularName: 'header';
@@ -530,6 +533,7 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    darkLogo: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -544,6 +548,83 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
     menus: Schema.Attribute.Component<'navigation.menu', true>;
     publishedAt: Schema.Attribute.DateTime;
     socialLinks: Schema.Attribute.Component<'navigation.social-links', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Struct.CollectionTypeSchema {
+  collectionName: 'products';
+  info: {
+    description: 'Products listed in the store. Each entry appears on /store. Upload images via Cloudinary, set sizes as comma-separated text (e.g. S, M, L or One Size), and add color variants with their own photo sets.';
+    displayName: 'Store \u2014 Product';
+    pluralName: 'products';
+    singularName: 'product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    code: Schema.Attribute.String & Schema.Attribute.Required;
+    colors: Schema.Attribute.Component<'product.color-variant', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    images: Schema.Attribute.Media<'images', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product.product'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    season: Schema.Attribute.String;
+    sizes: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSystemSettingsSystemSettings
+  extends Struct.SingleTypeSchema {
+  collectionName: 'system_settings';
+  info: {
+    description: 'macOS-style System Settings modal configuration. Edit sidebar items, profile info, and appearance background options.';
+    displayName: 'System Settings';
+    pluralName: 'system-settings-list';
+    singularName: 'system-settings';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.RichText;
+    backgroundOptions: Schema.Attribute.Component<
+      'settings.background-option',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::system-settings.system-settings'
+    > &
+      Schema.Attribute.Private;
+    profileImage: Schema.Attribute.Media<'images'>;
+    profileName: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Clayton Wingfield'>;
+    profileSubtitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'AAADM Account'>;
+    publishedAt: Schema.Attribute.DateTime;
+    sidebarItems: Schema.Attribute.Component<'settings.sidebar-item', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1064,6 +1145,8 @@ declare module '@strapi/strapi' {
       'api::dock.dock': ApiDockDock;
       'api::folder-category.folder-category': ApiFolderCategoryFolderCategory;
       'api::header.header': ApiHeaderHeader;
+      'api::product.product': ApiProductProduct;
+      'api::system-settings.system-settings': ApiSystemSettingsSystemSettings;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
