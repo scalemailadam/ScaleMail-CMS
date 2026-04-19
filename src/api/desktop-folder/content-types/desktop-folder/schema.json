@@ -53,6 +53,11 @@
     "textColor": {
       "type": "string",
       "description": "Text color for textModal. Any CSS color value, e.g. #111111 or #f0f0f0"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "description": "Controls the display order of this icon on the desktop. Lower numbers appear first."
     }
   }
 }
