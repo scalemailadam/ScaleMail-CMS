@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "store_home",
+  "info": {
+    "singularName": "store-home",
+    "pluralName": "store-homes",
+    "displayName": "Store — Home Page",
+    "description": "Cover images for the store homepage split layout. Upload via Cloudinary."
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "shopImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "lookbookImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
