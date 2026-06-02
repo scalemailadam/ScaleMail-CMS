@@ -3,7 +3,7 @@
   "info": {
     "displayName": "Background Option",
     "icon": "palette",
-    "description": "A background theme option for the Appearance settings"
+    "description": "A LiquidEther fluid-background palette option for the Appearance settings (3 color stops)"
   },
   "options": {},
   "attributes": {
@@ -15,21 +15,17 @@
       "type": "string",
       "required": true
     },
-    "tipColor": {
-      "type": "string",
-      "default": "#355566"
-    },
-    "baseColor": {
+    "color1": {
       "type": "string",
       "default": "#102630"
     },
-    "strokeColor": {
+    "color2": {
       "type": "string",
-      "default": "#2a0e0e"
+      "default": "#2b5876"
     },
-    "previewColor": {
+    "color3": {
       "type": "string",
-      "default": "#1e3a4a"
+      "default": "#5a8fb3"
     }
   }
 }
